@@ -1,0 +1,179 @@
+{
+  "calibration_runs": 64,
+  "test_runs": 200,
+  "calibration_seed_start": 310000,
+  "test_seed_start": 910000,
+  "scenario": {
+    "M": 120,
+    "K": 5,
+    "T": 12000,
+    "change_interval": 1000,
+    "noise_variance": 0.001,
+    "input_denominator": [
+      1,
+      -1.6,
+      0.95
+    ],
+    "burn_in": 2000,
+    "normalization": "population std per realization",
+    "h": "firwin(120,0.4), equivalent Hamming-window FIR, unit DC gain",
+    "primary_endpoint": "mean clean-output squared prediction error, samples 3001..12000"
+  },
+  "results": [
+    {
+      "label": "BLMS tuned EMSE",
+      "q": 1.0,
+      "eta": 0.0005499999999999999,
+      "NMSD_dB": 0.4865044484133222,
+      "EMSE_dB": -6.4731992223988035,
+      "gain_EMSE_vs_BLMS_dB": 0.0,
+      "gain_CI95": [
+        0.0,
+        0.0
+      ],
+      "finite_all": true
+    },
+    {
+      "label": "q-BLMS tuned EMSE",
+      "q": 2.5,
+      "eta": 0.0005499999999999999,
+      "NMSD_dB": -1.277990096311223,
+      "EMSE_dB": -8.499778637684315,
+      "gain_EMSE_vs_BLMS_dB": 2.0265794152855103,
+      "gain_CI95": [
+        2.005321059400536,
+        2.0473978859091555
+      ],
+      "finite_all": true
+    },
+    {
+      "label": "BLMS same eta as q",
+      "q": 1.0,
+      "eta": 0.0005499999999999999,
+      "NMSD_dB": 0.4865044484133222,
+      "EMSE_dB": -6.4731992223988035,
+      "gain_EMSE_vs_BLMS_dB": 0.0,
+      "gain_CI95": [
+        0.0,
+        0.0
+      ],
+      "finite_all": true
+    },
+    {
+      "label": "BLMS tuned NMSD",
+      "q": 1.0,
+      "eta": 0.0001,
+      "NMSD_dB": -0.19580121127879402,
+      "EMSE_dB": -4.9181289881646,
+      "gain_EMSE_vs_BLMS_dB": -1.5550702342342027,
+      "gain_CI95": [
+        -1.57276637189867,
+        -1.5372721955856385
+      ],
+      "finite_all": true
+    },
+    {
+      "label": "Constant-leak BLMS tuned EMSE",
+      "q": 2.5,
+      "eta": 0.0005499999999999999,
+      "NMSD_dB": -1.2972309572795606,
+      "EMSE_dB": -8.545688332884225,
+      "gain_EMSE_vs_BLMS_dB": 2.0724891104854226,
+      "gain_CI95": [
+        2.0535396475493655,
+        2.091895314832676
+      ],
+      "finite_all": true
+    }
+  ],
+  "sensitivity_fixed_parameters": [
+    {
+      "interval": 500,
+      "EMSE_dB": [
+        -5.217775688288135,
+        -7.183522080741662
+      ],
+      "gain_dB": 1.965746392453532,
+      "CI95": [
+        1.9387898170800544,
+        1.9917926541987854
+      ]
+    },
+    {
+      "interval": 1500,
+      "EMSE_dB": [
+        -7.508659789224161,
+        -9.09418041089322
+      ],
+      "gain_dB": 1.5855206216690585,
+      "CI95": [
+        1.5477193135279703,
+        1.6223430863825048
+      ]
+    },
+    {
+      "interval": 3000,
+      "EMSE_dB": [
+        -9.783567650558515,
+        -9.785920795320225
+      ],
+      "gain_dB": 0.0023531447617099657,
+      "CI95": [
+        -0.058387601275522456,
+        0.0630173775807083
+      ]
+    }
+  ],
+  "original_narrow_single_change": [
+    {
+      "q": 1.0,
+      "eta": 0.0005,
+      "pre_NMSD_dB": -11.97600318814745,
+      "post_transient_NMSD_dB": -0.8352311893623116,
+      "final_NMSD_dB": -8.45155047222386,
+      "pre_EMSE_dB": -24.917979546304707,
+      "post_transient_EMSE_dB": -8.855545261507876,
+      "final_EMSE_dB": -21.12438730404829
+    },
+    {
+      "q": 1.01,
+      "eta": 0.0005,
+      "pre_NMSD_dB": -11.738893630506556,
+      "post_transient_NMSD_dB": -0.9514076458384373,
+      "final_NMSD_dB": -8.57324929618677,
+      "pre_EMSE_dB": -24.60323880067709,
+      "post_transient_EMSE_dB": -8.948442405564313,
+      "final_EMSE_dB": -21.217475217897363
+    },
+    {
+      "q": 1.05,
+      "eta": 0.0005,
+      "pre_NMSD_dB": -10.744124881976012,
+      "post_transient_NMSD_dB": -1.3545828670352154,
+      "final_NMSD_dB": -8.759191949008347,
+      "pre_EMSE_dB": -22.958567449196682,
+      "post_transient_EMSE_dB": -9.273536264443955,
+      "final_EMSE_dB": -21.03719397594694
+    },
+    {
+      "q": 1.1,
+      "eta": 0.0005,
+      "pre_NMSD_dB": -9.5822737580653,
+      "post_transient_NMSD_dB": -1.7411422843299467,
+      "final_NMSD_dB": -8.525832934476567,
+      "pre_EMSE_dB": -20.942744812085618,
+      "post_transient_EMSE_dB": -9.589973522518353,
+      "final_EMSE_dB": -20.092177295980143
+    },
+    {
+      "q": 1.3,
+      "eta": 0.0005,
+      "pre_NMSD_dB": -6.55395131767741,
+      "post_transient_NMSD_dB": -2.46773026597057,
+      "final_NMSD_dB": -6.513097887091863,
+      "pre_EMSE_dB": -16.226809872066383,
+      "post_transient_EMSE_dB": -10.201970004823565,
+      "final_EMSE_dB": -16.255534870692138
+    }
+  ]
+}
