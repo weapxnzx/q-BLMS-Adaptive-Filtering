@@ -8,13 +8,13 @@ The repository includes an ECG artifact-cancellation example and a controlled sy
 
 The q-BLMS update is obtained by applying the componentwise Jackson derivative to a quadratic block cost:
 
-$
+$$
 \mathbf{w}_{n+1}
 =
 \mathbf{w}_n+2\eta\mathbf{X}_n\mathbf{e}_n
 -\eta(q-1)\operatorname{Diag}
 \left(\operatorname{diag}(\mathbf{X}_n\mathbf{X}_n^T)\right)\mathbf{w}_n.
-$
+$$
 
 The implementation uses overlapping blocks and updates the coefficients at every sample.
 
