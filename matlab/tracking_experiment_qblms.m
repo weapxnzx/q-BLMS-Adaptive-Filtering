@@ -1,4 +1,4 @@
-function results = qblms_tracking_experiment(mode)
+function results = tracking_experiment_qblms(mode)
 % Reproduce Eq. (5), with overlapping blocks updated every sample.
 % Run: qblms_tracking_experiment
 % Exact numerical check: qblms_tracking_experiment('verify')
