@@ -168,9 +168,7 @@ This is an illustrative simulation. The animated display does not establish hard
 
 The input is Gaussian noise filtered by:
 
-\[
-H(z)=\frac{1}{1-1.6z^{-1}+0.95z^{-2}}.
-\]
+$$H(z)=\frac{1}{1-1.6z^{-1}+0.95z^{-2}}$$
 
 The first 2,000 generated samples are discarded. Each retained input record is divided by its population standard deviation.
 
