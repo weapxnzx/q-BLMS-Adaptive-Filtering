@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
 =============================================================================
-Experiment 1: Real-Time ECG Artifact Cancellation (ANC) using q-JAPA
-Associated Paper: "A q-Jackson Affine Projection Algorithm for Robust 
+Experiment 1: Real-Time ECG Artifact Cancellation (ANC) using q-BLMS
+Associated Paper: "A q-Jackson Block LMS for Robust 
                    Adaptive Filtering under Correlated Inputs"
 =============================================================================
 """
@@ -52,7 +52,7 @@ q_vec = np.full(M, 1.1)
 
 plt.ion()
 fig, (ax1, ax2, ax3) = plt.subplots(3, 1, figsize=(12, 10))
-fig.suptitle('Real-Time Simulation: ECG Artifact Cancellation with q-JAPA', fontsize=14)
+fig.suptitle('Real-Time Simulation: ECG Artifact Cancellation with q-BLMS', fontsize=14)
 
 # Display window (e.g., last 3 seconds = 1080 samples)
 window_seconds = 3
@@ -61,7 +61,7 @@ window_samples = int(window_seconds * fs)
 # Subplots visual configuration
 axes = [ax1, ax2, ax3]
 titles = ['Signal d(n): Contaminated ECG (Input)', 
-          'Signal e(n): Recovered ECG (q-JAPA Output)', 
+          'Signal e(n): Recovered ECG (q-BLMS Output)', 
           'Signal s(n): Clean Original ECG (Ground Truth)']
 colors = ['#d62728', '#1f77b4', '#2ca02c']
 
