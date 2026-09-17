@@ -8,17 +8,17 @@ The repository includes an ECG artifact-cancellation example and a controlled sy
 
 The q-BLMS update is obtained by applying the componentwise Jackson derivative to a quadratic block cost:
 
-\[
+$
 \mathbf{w}_{n+1}
 =
 \mathbf{w}_n+2\eta\mathbf{X}_n\mathbf{e}_n
 -\eta(q-1)\operatorname{Diag}
 \left(\operatorname{diag}(\mathbf{X}_n\mathbf{X}_n^T)\right)\mathbf{w}_n.
-\]
+$
 
 The implementation uses overlapping blocks and updates the coefficients at every sample.
 
-For \(q=1\), the diagonal correction vanishes and the algorithm reduces to the BLMS baseline used in these experiments. The update does not include affine projection normalization.
+For $q=1$, the diagonal correction vanishes and the algorithm reduces to the BLMS baseline used in these experiments. The update does not include affine projection normalization.
 
 The file `q_japa_algorithm.py` and the function `q_japa_stream` retain their original names for compatibility with the ECG script.
 
