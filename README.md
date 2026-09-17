@@ -10,7 +10,7 @@ The q-BLMS update is obtained by applying the componentwise Jackson derivative t
 
 $$\mathbf{w}_{n+1}=
 \mathbf{w}_n+2\eta\mathbf{X}_n\mathbf{e}_n
--\eta(q-1)\operatorname{Diag}
+-\eta(q-1)\mathrm{Diag}
 \left(\operatorname{diag}(\mathbf{X}_n\mathbf{X}_n^T)\right)\mathbf{w}_n$$
 
 The implementation uses overlapping blocks and updates the coefficients at every sample.
