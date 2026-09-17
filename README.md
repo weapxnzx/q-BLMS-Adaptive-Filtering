@@ -12,7 +12,7 @@ $$\vec{w}(n+1) = \vec{w}(n) + 2\eta X(n)e(n)- \eta\left[(\vec{q}-\vec{1})\odot \
 
 The implementation uses overlapping blocks and updates the coefficients at every sample.
 
-For $q=1$, the diagonal correction vanishes and the algorithm reduces to the BLMS baseline used in these experiments. The update does not include affine projection normalization.
+For $q=1$, the diagonal correction vanishes and the algorithm reduces to the BLMS baseline used in these experiments. The experiments use the same deformation parameter for all coefficients, so $\vec q=q\vec 1$. The update does not include affine projection normalization.
 
 The file `q_japa_algorithm.py` and the function `q_japa_stream` retain their original names for compatibility with the ECG script.
 
@@ -199,9 +199,9 @@ The Python confidence intervals apply to the Python evaluation realizations. The
 
 In the evaluated tracking scenario, q-BLMS produces smaller post-change error peaks, while BLMS reaches lower errors near the end of each constant-system interval. Constant-leak BLMS obtains similar average performance to q-BLMS.
 
-The reported benefit concerns average tracking error, including transients. It does not demonstrate universal superiority, a lower stationary error floor, or superiority over APA or leakage-based alternatives.
+The reported benefit concerns average tracking error, including transients. It does not demonstrate universal superiority, a lower stationary error floor, or superiority over BLMS.
 
-The additional script `matlab/exp_especial.m` concerns a different single-change experiment. Its results should be distinguished from the periodic tracking benchmark.
+The additional script `matlab/exp_especial.m` contains an exploratory single-change experiment with ill-conditioned inputs. This experiment motivated the periodic tracking benchmark implemented in `python/experiment_qblms.py`. The two experiments use different protocols, and their results should be interpreted separately.
 
 ## Citation
 
